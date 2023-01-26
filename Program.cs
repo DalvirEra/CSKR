@@ -5,7 +5,7 @@ for (int i = 0; i < array.Length; i++){
         array2 = ArrayAppenderLengher(array2,array[i]);
     }
 }
-PrintArray(array2);
+
 
 // заменить существующий массив новым больше на 1 значение и заполнить.
 // в теории старый должен стиратся из памяти.
@@ -14,14 +14,4 @@ string[] ArrayAppenderLengher(string[] ar,string str){
     ar.CopyTo(array,0);
     array[array.Length-1] = str;
     return array;
-}
-
-void PrintArray(string[] array)
-{
-    int count = array.Length;
-    for (int i = 0; i < count; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }   
-    Console.WriteLine();
 }
